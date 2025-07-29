@@ -1,0 +1,52 @@
+.login{
+  display: flex;
+  color: white;
+  width: 100vw;
+  justify-content: center;
+  margin-top: 2vh;
+h1{
+  font-family: var(--font-cubano);
+  font-size: 3rem;
+  text-align: end;
+  padding-right: 100px;
+  max-width: 50vw;
+}
+.right{
+  background-color: #21212195;
+  width: 50vw;
+  height: 80vh;
+  border: 1px solid whitesmoke;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5vh 2vw;
+  h6{
+    font-family: var(--font-cubano);
+    font-size: 2.5rem;
+  }
+  .innerbox{
+    display: flex;
+    flex-direction: column;
+    height: 60vh;
+    width: 100%;
+    background-color: #21212195;
+    padding: 4vh 2vw;
+    gap:10vh;
+    border-radius: 20px;
+    align-items: center;
+    p{
+      font-family: var(--font-space-grotesk);
+      font-size: 1.2rem;
+      max-width: 500px;
+    }
+.container{
+  font-family: var(--font-jetbrains);
+  font-weight: 900;
+  a{
+    max-width: 500px;
+  }
+}
+}
+}}

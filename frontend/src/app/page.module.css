@@ -1,0 +1,47 @@
+
+.page{
+    overflow: hidden;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  width: 100vw;
+  justify-content: center;
+  align-items: center;
+}
+
+.main h1 {
+  font-family: var(--font-cubano);
+  font-size: 3rem;
+  color: #f5f5f5; /* Light grey instead of yellow */
+}
+
+.main p {
+  font-family: var(--font-montserrat);
+  font-size: 1.3em;
+  max-width: 700px;
+  text-align: center;
+  color: #d1d5db; /* Light grey instead of yellow tone */
+}
+
+.main .action {
+  display: flex;
+  padding: 2vh 5vw;
+  gap: 2vw;
+  font-family: var(--font-jetbrains);
+  color: #1f2937; /* Dark grey instead of burgundy */
+}
+
+.main .action a {
+  background-color: #dadadb; /* Medium grey instead of yellow */
+  padding: 5px 10px;
+  border-radius: 15px;
+  font-size: 18px;
+  transition: 200ms ease-in-out;
+}
+
+.main .action a:hover {
+  background-color: #6b7280; /* Darker grey instead of orange */
+  color: #f9fafb; /* Off-white instead of aliceblue */
+}

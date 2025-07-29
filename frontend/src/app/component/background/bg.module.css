@@ -1,0 +1,50 @@
+.blobContainer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    pointer-events: none;
+    z-index: -2;
+    
+  }
+  
+  .blob {
+    --size: 40rem;
+    --translate-x: 0px;
+    --translate-y: 0px;
+    --bg-color: #6D72C3;
+    
+    position: absolute;
+    width: 80vw;
+    max-width: 40rem;
+    height: var(--size);
+    left: calc(50% - var(--size) / 2);
+    top: calc(50% - var(--size) / 2);
+    background-image: linear-gradient(40deg, #666666 , #8c8c8c );
+    border-radius: 50%;
+    filter: blur(60px);
+    animation: blobAnimation 10s infinite alternate;
+    transform: translate(var(--translate-x), var(--translate-y));
+    transition: transform 3s ease;
+    opacity: 0.7;
+  }
+  
+  @keyframes blobAnimation {
+    0% {
+      border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+    }
+    25% {
+      border-radius: 50% 50% 20% 80% / 25% 80% 20% 75%;
+    }
+    50% {
+      border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
+    }
+    75% {
+      border-radius: 80% 20% 50% 50% / 50% 40% 60% 50%;
+    }
+    100% {
+      border-radius: 40% 60% 60% 40% / 70% 30% 70% 30%;
+    }
+  }

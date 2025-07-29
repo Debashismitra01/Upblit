@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Homemade+Apple&family=Sulphur+Point:wght@300;400;700&display=swap');
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 10vw;
+    h1{
+        font-family: "Homemade Apple", cursive;
+  font-weight: 400;
+  font-style: normal;
+  cursor: default;
+    }
+    a{
+        font-family: "Sulphur Point", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  cursor: default;
+    }
+}
