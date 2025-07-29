@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net472</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <!-- Add references manually -->
+    <Reference Include="WixSharp">
+      <HintPath>$(UserProfile)\.nuget\packages\wixsharp.bin\1.26.0\lib\net462\WixSharp.dll</HintPath>
+    </Reference>
+    <Reference Include="WixSharp.UI">
+      <HintPath>$(UserProfile)\.nuget\packages\wixsharp.bin\1.26.0\lib\net462\WixSharp.UI.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="WixSharp.bin" Version="1.26.0" />
+    <PackageReference Include="WixSharp.wix.bin" Version="3.14.1" />
+  </ItemGroup>
+</Project>
