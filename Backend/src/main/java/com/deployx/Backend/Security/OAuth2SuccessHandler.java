@@ -35,7 +35,7 @@ public class OAuth2SuccessHandler implements AuthenticationSuccessHandler {
 
         String jwt = jwtService.generateToken(githubId, avatarUrl, username);
 
-        response.sendRedirect("http://10.248.0.93:3000/oauth-success?token=" + jwt);
+        response.sendRedirect("http://localhost:3000/oauth-success?token=" + jwt);
     }
     public static String extractUsername(CustomOAuth2User user) {
         Object login = user.getAttributes().get("login");

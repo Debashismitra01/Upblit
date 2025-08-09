@@ -95,4 +95,16 @@ public class DeployService {
             ));
         }
     }
+    public ResponseEntity<?> delete(String name){
+        Project project= projectService.getProject(name);
+        portService.addPort(project.getPort());
+        try {
+            projectService.delete(project);
+            return ResponseEntity.noContent().build();
+        } catch (Exception e) {
+            return ResponseEntity.notFound().build();
+        }
+    }
 }
+
+

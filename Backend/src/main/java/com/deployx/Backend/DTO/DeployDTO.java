@@ -11,5 +11,4 @@ public class DeployDTO {
     private String clone_url;
     private String name;
     private String Privacy;
-    private Integer Port;
 }

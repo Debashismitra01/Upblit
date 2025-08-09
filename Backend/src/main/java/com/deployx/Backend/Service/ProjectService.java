@@ -6,6 +6,7 @@ import com.deployx.Backend.Repository.ProjectRepository;
 import com.deployx.Backend.Repository.UserRepository;
 import com.deployx.Backend.Security.UserdataUtil;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Service;
 
@@ -37,6 +38,14 @@ public class ProjectService {
 
     public List<Project> getProjectsByUsername() {
         return userRepository.findByUsername(UserdataUtil.getCurrentUsername()).orElse(null).getProjects();
+    }
+    public  Project getProject(String name){
+        Project project=projectRepository.findByNameAndOwnerId(name,userRepository.findByUsername(UserdataUtil.getCurrentUsername()).orElse(null).getId());
+        return project;
+    }
+
+    public void delete(Project project){
+        projectRepository.delete(project);
     }
 
     public Project markProjectAsDeployed(Project project, User user) {
