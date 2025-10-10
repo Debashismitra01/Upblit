@@ -53,7 +53,7 @@ It’s like **Vercel**, but open, agentic, and customizable — empowering teams
 - **Backend:** Java + Maven (Spring Boot)
 - **Frontend:** Next.js (TypeScript)
 - **CLI:** Go
-- **Containerization:** Docker, Kubernetes *(in progress)*
+- **Containerization:** Docker, Kubernetes
 - **Database:** PostgreSQL
 
 ---
@@ -64,7 +64,7 @@ It’s like **Vercel**, but open, agentic, and customizable — empowering teams
 - Java 17+
 - Maven 3.9+
 - Node.js 18+
-- Docker *(optional)*
+- Docker 
 - Git
 
 ### ⚡ Setup
