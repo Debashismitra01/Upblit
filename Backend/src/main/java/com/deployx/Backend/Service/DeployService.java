@@ -97,6 +97,8 @@ public class DeployService {
     }
     public ResponseEntity<?> delete(String name){
         Project project= projectService.getProject(name);
+        // Need to add null point fallback in project service
+        if(project==null) return ResponseEntity.status(403).build();
         portService.addPort(project.getPort());
         try {
             projectService.delete(project);

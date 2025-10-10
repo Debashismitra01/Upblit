@@ -1,7 +1,0 @@
-{
-  "extends": ["next/core-web-vitals", "next/typescript"],
-  "rules": {
-    "@typescript-eslint/no-unused-vars": ["warn"],  // Change 'error' to 'warn' if you want to avoid build failures
-    "react/no-unescaped-entities": "warn"  // Change to 'off' to ignore this rule completely
-  }
-}

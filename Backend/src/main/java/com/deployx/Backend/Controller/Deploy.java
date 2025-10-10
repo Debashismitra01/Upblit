@@ -18,4 +18,9 @@ public class Deploy {
     public ResponseEntity<?> deployProject(@RequestBody DeployDTO deployDTO) {
         return deployService.deploy(deployDTO);
     }
+
+    @DeleteMapping
+    public ResponseEntity<?> deleteProject(@RequestBody String name){
+        return deployService.delete(name);
+    }
 }
