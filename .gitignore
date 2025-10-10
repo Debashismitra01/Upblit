@@ -1,0 +1,114 @@
+# ==========================================
+# 🌐 FRONTEND (Next.js / Node)
+# ==========================================
+/frontend/node_modules
+/frontend/.pnp
+/frontend/.pnp.*
+/frontend/.yarn/*
+!/frontend/.yarn/patches
+!/frontend/.yarn/plugins
+!/frontend/.yarn/releases
+!/frontend/.yarn/versions
+
+# Testing
+/frontend/coverage
+
+# Next.js build output
+/frontend/.next
+/frontend/out
+
+# Production build
+/frontend/build
+
+# Misc
+/frontend/.DS_Store
+/frontend/*.pem
+
+# Logs
+/frontend/npm-debug.log*
+/frontend/yarn-debug.log*
+/frontend/yarn-error.log*
+/frontend/pnpm-debug.log*
+
+# Environment files
+/frontend/.env*
+/frontend/.vercel
+/frontend/*.tsbuildinfo
+/frontend/next-env.d.ts
+
+
+# ==========================================
+# ☕ BACKEND (Java / Maven / Spring Boot)
+# ==========================================
+/backend/HELP.md
+/backend/target/
+/backend/.mvn/wrapper/maven-wrapper.jar
+!/backend/**/src/main/**/target/
+!/backend/**/src/test/**/target/
+
+# STS / Spring Tool Suite
+/backend/.apt_generated
+/backend/.classpath
+/backend/.factorypath
+/backend/.project
+/backend/.settings
+/backend/.springBeans
+/backend/.sts4-cache
+
+# IntelliJ IDEA
+/backend/.idea
+/backend/*.iws
+/backend/*.iml
+/backend/*.ipr
+
+# NetBeans
+/backend/nbproject/private/
+/backend/nbbuild/
+/backend/dist/
+/backend/nbdist/
+/backend/.nb-gradle/
+/backend/build/
+!/backend/**/src/main/**/build/
+!/backend/**/src/test/**/build/
+
+# VS Code
+/backend/.vscode/
+
+# ==========================================
+# 🐹 CLI (Go)
+# ==========================================
+# Binaries and build output
+/cli/*.exe
+/cli/*.exe~
+/cli/*.dll
+/cli/*.so
+/cli/*.dylib
+/cli/*.test
+/cli/*.out
+/cli/bin/
+/cli/vendor/
+/cli/*.log
+
+# IDEs and editors
+/cli/*.swp
+/cli/*~
+/cli/.idea/
+/cli/.vscode/
+/cli/*.bak
+/cli/*.tmp
+
+# Go environment and config
+/cli/.env
+/cli/.env.*
+
+# ==========================================
+# 🧩 Common project-wide ignores
+# ==========================================
+# System files
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# OS metadata
+Icon?
+.DS_Store
