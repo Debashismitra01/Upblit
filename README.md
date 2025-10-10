@@ -26,7 +26,7 @@
 ## 🧠 What is Upblit?
 
 **Upblit** is an open-source **auto-deployment and build orchestration system** — built to simplify **modern fullstack deployment** using Java, Maven, and Go.  
-It’s like **Vercel**, but open, agentic, and customizable — empowering teams to deploy web apps, microservices, and AI models with zero manual ops.
+It’s like Devops-team, but open, agentic, and customizable — empowering teams to deploy web apps, microservices, and AI models with zero manual ops.
 
 > ⚙️ **Code → Build → Deploy → Scale**  
 > All automated. All from your repo.
