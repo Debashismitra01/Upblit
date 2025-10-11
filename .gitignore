@@ -53,6 +53,7 @@
 /backend/.mvn/wrapper/maven-wrapper.jar
 !/backend/**/src/main/**/target/
 !/backend/**/src/test/**/target/
+/backend/.env*
 
 # STS / Spring Tool Suite
 /backend/.apt_generated
