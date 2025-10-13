@@ -4,6 +4,7 @@ import styles from "./page.module.css";
 import BG from "./component/background/background";
 import Navbar from "./component/navbar/navbar";
 import { ChevronRight, Github, Zap, Shield, GitBranch, Server, Database, Globe, Users, Terminal, Rocket, Code, Lock, CheckCircle, ArrowRight, Play, FileText, Clock, Layers, Network, BarChart3, GitMerge } from "lucide-react";
+import Contributors from './component/contributors/contributors';
 
 export default function Hello() {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -231,7 +232,7 @@ export default function Hello() {
           </div>
         </div>
       </section>
-
+   {<Contributors />}
       {/* Footer */}
       <footer className="border-t border-gray-700 mt-20">
         <div className="max-w-7xl mx-auto px-6 py-12">
