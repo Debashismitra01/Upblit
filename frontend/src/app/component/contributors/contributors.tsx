@@ -13,8 +13,8 @@ interface ContributorsProps {
 }
 
 export default function Contributors({ type = 'default' }: ContributorsProps) {
-  const owner = "Circuit-Overtime";
-  const repo = "elixpo_chapter";
+  const owner = "Debashismitra01";
+  const repo = "Upblit";
 
   const [contributors, setContributors] = useState<Contributor[]>([]);
   const [loading, setLoading] = useState(true);

@@ -232,7 +232,7 @@ export default function Hello() {
           </div>
         </div>
       </section>
-   {<Contributors />}
+   {<Contributors type="large"/>}
       {/* Footer */}
       <footer className="border-t border-gray-700 mt-20">
         <div className="max-w-7xl mx-auto px-6 py-12">
