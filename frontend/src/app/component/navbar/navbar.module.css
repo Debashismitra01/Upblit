@@ -26,7 +26,6 @@
   align-items: center;
   gap: 8px;
   cursor: pointer;
-  filter: brightness(100);
 }
 
 .menu {

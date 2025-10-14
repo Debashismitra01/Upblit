@@ -11,18 +11,18 @@
   }
   
   .blob {
-    --size: 40rem;
+    --size: 30rem;
     --translate-x: 0px;
     --translate-y: 0px;
-    --bg-color: #6D72C3;
+    --bg-color: #8a2be2;
     
     position: absolute;
-    width: 80vw;
-    max-width: 40rem;
+    width: 60vw;
+    max-width: 30rem;
     height: var(--size);
     left: calc(50% - var(--size) / 2);
     top: calc(50% - var(--size) / 2);
-    background-image: linear-gradient(40deg, #666666 , #8c8c8c );
+    background-image: linear-gradient(40deg, #fe0184, #f311c8);
     border-radius: 50%;
     filter: blur(60px);
     animation: blobAnimation 10s infinite alternate;

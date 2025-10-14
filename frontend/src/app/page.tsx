@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
-import BG from "./component/background/background";
+import BG from "./component/Background/background";
 import Navbar from "./component/navbar/navbar";
 import { ChevronRight, Github, Zap, Shield, GitBranch, Server, Database, Globe, Users, Terminal, Rocket, Code, Lock, CheckCircle, ArrowRight, Play, FileText, Clock, Layers, Network, BarChart3, GitMerge } from "lucide-react";
 

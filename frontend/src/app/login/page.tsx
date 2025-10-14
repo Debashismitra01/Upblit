@@ -1,6 +1,6 @@
 import styles from "./login.module.css";
 import Navbar from "../component/navbar/navbar";
-import BG from "../component/background/background";
+import BG from "../component/Background/background";
 export default function Login() {
   const githuburi=`${process.env.NEXT_PUBLIC_API_URL}/oauth2/authorization/github`;
   console.log(githuburi);
