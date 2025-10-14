@@ -1,0 +1,161 @@
+/* Background Page Wrapper */
+.pageWrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  color: white;
+  padding-top: 40px;
+}
+
+/* Main Container */
+.container {
+  background-color: #21212195;
+  border: 1px solid whitesmoke;
+  border-radius: 15px;
+  width: 45vw;
+  max-width: 700px;
+  min-height: 70vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5vh 2vw;
+  font-family: var(--font-space-grotesk);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.1);
+}
+
+/* Header */
+.heading {
+  font-family: var(--font-cubano);
+  font-size: 2.8rem;
+  margin-bottom: 1vh;
+  text-align: center;
+}
+
+.subheading {
+  font-family: var(--font-space-grotesk);
+  color: #e0e0e0;
+  font-size: 1.1rem;
+  text-align: center;
+  max-width: 500px;
+  margin-bottom: 3vh;
+}
+
+/* Form Selection */
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  background-color: #21212195;
+  border-radius: 20px;
+  padding: 3vh 2vw;
+  font-family: var(--font-jetbrains);
+}
+
+.container label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-weight: 600;
+  font-size: 1rem;
+  letter-spacing: 0.5px;
+}
+
+/* Inputs, textarea, and select unified */
+.container input,
+.container textarea,
+.container select {
+  background-color: rgba(33, 33, 33, 0.6); /* match container transparency */
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  padding: 0.8rem;
+  color: #ffffff;
+  font-family: var(--font-jetbrains);
+  font-size: 1rem;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+  appearance: none; /* removes native arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
+/* Focus state */
+.container input:focus,
+.container textarea:focus,
+.container select:focus {
+  outline: none;
+  border-color: #ffffff;
+  background-color: rgba(33, 33, 33, 0.75); /* slightly darker for focus */
+}
+
+/* Add a custom arrow for select */
+.container select {
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 10 6' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 0l5 6 5-6z' fill='white'/%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  background-size: 0.65rem;
+  padding-right: 2rem; /* space for arrow */
+}
+
+/* Button */
+.container button {
+  width: 100%;
+  padding: 0.9rem;
+  border: 1px solid white;
+  border-radius: 12px;
+  background-color: transparent;
+  color: white;
+  font-weight: 700;
+  font-family: var(--font-jetbrains);
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+button:hover {
+  background-color: white;
+  color: black;
+  transform: translateY(-2px);
+}
+
+.success {
+  color: #22c55e;
+  font-weight: 600;
+  text-align: center;
+  font-family: var(--font-space-grotesk);
+}
+
+.error {
+  color: #ef4444;
+  font-weight: 600;
+  text-align: center;
+  font-family: var(--font-space-grotesk);
+}
+
+/* Animation */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.container {
+  animation: fadeSlideIn 0.8s ease forwards;
+}

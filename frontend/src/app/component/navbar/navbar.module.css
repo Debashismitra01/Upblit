@@ -10,6 +10,7 @@
   justify-content: space-between;
   padding: 4vh 5vw;
   height: 70px;
+  z-index: 1;
 }
 
 .left {
