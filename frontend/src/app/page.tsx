@@ -93,7 +93,7 @@ export default function Hello() {
               <div className={`p-6 rounded-2xl border transition-all duration-300 h-full ${
                 activeFeature === index
                   ? 'bg-white text-gray-900 border-gray-300 shadow-2xl'
-                  : 'bg-gray-900 border-gray-700 hover:border-gray-600'
+                  : 'bg-[#cb0169] border-transparent hover:border-[#fe0184]'
               }`}>
                 <feature.icon className={`w-12 h-12 mb-4 ${
                   activeFeature === index ? 'text-gray-900' : 'text-gray-300'
@@ -104,15 +104,10 @@ export default function Hello() {
                   {feature.title}
                 </h3>
                 <p className={`text-sm leading-relaxed mb-4 ${
-                  activeFeature === index ? 'text-gray-700' : 'text-gray-400'
+                  activeFeature === index ? 'text-gray-700' : 'text-gray-900'
                 }`}>
                   {feature.desc}
                 </p>
-                <div className={`text-xs font-mono ${
-                  activeFeature === index ? 'text-gray-600' : 'text-gray-500'
-                }`}>
-                  Replaces: {feature.replaces}
-                </div>
               </div>
             </div>
           ))}

@@ -58,7 +58,7 @@ export default function Contributors({ type = 'default' }: ContributorsProps) {
           {contributors.map((contributor) => (
             <li
               key={contributor.id}
-              className="flex items-center gap-4 py-4 hover:bg-gray-800 rounded-lg transition-colors cursor-pointer"
+              className="flex items-center gap-4 py-4 hover:bg-gray-100 rounded-lg transition-colors cursor-pointer"
               onClick={() => window.open(contributor.html_url, '_blank')}
               title={`${contributor.login} — ${contributor.contributions} contributions`}
             >
@@ -111,7 +111,7 @@ export default function Contributors({ type = 'default' }: ContributorsProps) {
             href={contributor.html_url}
             target="_blank"
             rel="noopener noreferrer"
-            className={`bg-gray-900 border rounded-2xl p-4 flex flex-col items-center text-center text-gray-100 transition-transform duration-200 hover:scale-105 hover:border-cyan-400 shadow-sm ${
+            className={`bg-black border rounded-2xl p-4 flex flex-col items-center text-center text-gray-100 transition-transform duration-200 hover:scale-105 hover:border-[#8c1568] shadow-sm ${
               isCompact ? 'border-gray-700 p-2' : 'border-gray-700 p-4'
             }`}
             title={`${contributor.login} — ${contributor.contributions} contributions`}
@@ -119,7 +119,7 @@ export default function Contributors({ type = 'default' }: ContributorsProps) {
             <img
               src={contributor.avatar_url}
               alt={contributor.login}
-              className={`rounded-full border-2 border-cyan-400 mb-3 object-cover ${
+              className={`rounded-full border-2 border-[#8c1568] mb-3 object-cover ${
                 isCompact ? 'w-12 h-12' : 'w-20 h-20'
               }`}
               loading="lazy"
