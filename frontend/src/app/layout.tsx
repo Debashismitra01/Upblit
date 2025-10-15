@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { jetbrainsMono, montserrat, spaceGrotesk, cubano } from './fonts';
 import "./globals.css";
+import Footer from "./component/footer/footer";
 
 export const metadata: Metadata = {
   title: "Upblit",
@@ -18,6 +19,7 @@ export default function RootLayout({
         className={`${jetbrainsMono.variable} ${montserrat.variable} ${spaceGrotesk.variable} ${cubano.variable} antialiased`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );

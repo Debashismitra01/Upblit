@@ -226,25 +226,7 @@ export default function Hello() {
         </div>
       </section>
    {<Contributors type="large"/>}
-      {/* Footer */}
-      <footer className="border-t border-gray-700 mt-20">
-        <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gray-300 rounded-lg flex items-center justify-center">
-                <Rocket className="w-5 h-5 text-gray-800" />
-              </div>
-              <span className="text-xl font-bold text-gray-100">DeployX</span>
-            </div>
-            <div className="flex items-center space-x-6 text-gray-400">
-              <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
-              <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
-              <a href="#" className="hover:text-gray-300 transition-colors">Support</a>
-              <Github className="w-5 h-5 hover:text-gray-300 transition-colors cursor-pointer" />
-            </div>
-          </div>
-        </div>
-      </footer>
+      {/* Footer removed; using global footer from layout */}
     </>
   )
 }
