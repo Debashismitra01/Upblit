@@ -7,6 +7,8 @@
   --font-montserrat: 'Montserrat', sans-serif;
   --font-space-grotesk: 'Space Grotesk', sans-serif;
   --font-cubano: 'Cubano', sans-serif;
+  --footer-muted: color-mix(in oklab, var(--foreground) 70%, transparent);
+  --footer-border: color-mix(in oklab, var(--foreground) 12%, transparent);
 }
 
 @theme inline {

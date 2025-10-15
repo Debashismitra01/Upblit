@@ -1,15 +1,8 @@
-:root {
-  --footer-bg: var(--background);
-  --footer-fg: var(--foreground);
-  --footer-muted: color-mix(in oklab, var(--foreground) 70%, transparent);
-  --footer-border: color-mix(in oklab, var(--foreground) 12%, transparent);
-}
-
 .footer {
   width: 100%;
   border-top: 1px solid var(--footer-border);
-  background: var(--footer-bg);
-  color: var(--footer-fg);
+  background: var(--background);
+  color: var(--foreground);
 }
 
 .inner {
@@ -68,7 +61,7 @@
 }
 
 .link {
-  color: var(--footer-fg);
+  color: var(--foreground);
   text-decoration: none;
   font-size: 14px;
   opacity: 0.85;
@@ -106,7 +99,7 @@
   height: 32px;
   border: 1px solid var(--footer-border);
   border-radius: 8px;
-  color: var(--footer-fg);
+  color: var(--foreground);
   text-decoration: none;
   font-size: 14px;
   opacity: 0.9;

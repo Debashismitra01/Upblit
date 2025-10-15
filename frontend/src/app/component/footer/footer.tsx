@@ -65,7 +65,7 @@ export default function Footer() {
                 <path d="M4 4l16 16M20 4L4 20" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
               </svg>
             </a>
-            <a href="https://discord.com/" target="_blank" rel="noreferrer" aria-label="Discord" className={styles.socialBtn}>
+            <a href="https://discord.gg/eucMQ4Bj" target="_blank" rel="noreferrer" aria-label="Discord" className={styles.socialBtn}>
               <svg viewBox="0 0 24 24" className={styles.socialIcon} aria-hidden="true">
                 <path fill="currentColor" d="M20.317 4.369A19.791 19.791 0 0016.558 3c-.2.36-.43.848-.59 1.23a17.945 17.945 0 00-4.936 0c-.16-.382-.39-.87-.59-1.23A19.736 19.736 0 003.68 4.37C2.04 7.1 1.36 9.73 1.5 12.32a19.933 19.933 0 006.107 3.12c.25-.34.47-.704.66-1.09a12.9 12.9 0 01-1.03-.5c.09-.07.18-.15.27-.23a13.49 13.49 0 0011.01 0c.09.08.18.16.27.23-.33.2-.67.37-1.03.5.19.39.41.75.66 1.09a19.933 19.933 0 006.107-3.12c.17-3.2-.55-5.83-2.207-7.95zM9.12 12.98c-1.01 0-1.84-.93-1.84-2.07 0-1.13.82-2.06 1.84-2.06s1.85.93 1.84 2.06c0 1.14-.83 2.07-1.84 2.07zm5.76 0c-1.01 0-1.84-.93-1.84-2.07 0-1.13.82-2.06 1.84-2.06s1.84.93 1.84 2.06c0 1.14-.82 2.07-1.84 2.07z"/>
               </svg>
