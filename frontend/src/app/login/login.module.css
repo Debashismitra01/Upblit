@@ -5,8 +5,7 @@
   justify-content: center;
   width: 100dvw;
   max-width: 100%;
-  height: calc(100dvh - 96px);
-  max-height: calc(100dvh - 96px);
+  height: 91.9vh;
   padding: clamp(1rem, 2.5vw, 1.75rem);
   color: #f5f5f5;
   font-family: var(--font-space-grotesk);
@@ -20,8 +19,8 @@
   position: absolute;
   inset: -35% -15% -30% -15%;
   background:
-    radial-gradient(circle at top right, rgba(254, 1, 132, 0.45), transparent 55%),
-    radial-gradient(circle at bottom left, rgba(243, 17, 200, 0.35), transparent 60%);
+    radial-gradient(circle at top right, rgba(254, 1, 132, 0.45), transparent 50%),
+    radial-gradient(circle at bottom left, rgba(243, 17, 200, 0.35), transparent 40%);
   filter: blur(80px);
   opacity: 0.9;
   animation: gradientPulse 14s ease-in-out infinite alternate;
