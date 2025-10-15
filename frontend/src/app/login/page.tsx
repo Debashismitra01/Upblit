@@ -15,15 +15,15 @@ export default function Login() {
       <section className={styles.loginPage}>
         <div className={styles.layout}>
           <div className={styles.copy}>
-            <span className={styles.badge}>DeployX Platform</span>
+            <span className={styles.badge}>Upblit Platform</span>
             <h1 className={styles.title}>Deploy your project like an expert.</h1>
             <p className={styles.subtitle}>
               Select a Git provider to import an existing project from a Git repository and accelerate your deployment
-              workflow with DeployX.
+              workflow with Upblit.
             </p>
             <div className={styles.callout}>
               <p>
-                Authenticated connections keep your repositories in sync with DeployX, unlocking preview builds,
+                Authenticated connections keep your repositories in sync with Upblit, unlocking preview builds,
                 automated testing, and reliable CI/CD pipelines.
               </p>
             </div>
