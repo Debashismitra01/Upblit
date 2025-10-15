@@ -124,7 +124,7 @@
   transition: all 0.25s ease;
 }
 
-button:hover {
+.button:hover {
   background-color: white;
   color: black;
   transform: translateY(-2px);

@@ -37,9 +37,9 @@ export default function Dashboard() {
         const data = await res.json();
         
         // Transform data to match our interface
-        const transformedProjects = data.map((project: any) => ({
+        const transformedProjects = data.map((project: Project) => ({
           ...project,
-          domain: `${project.name}.vercel.app`,
+          domain: `${project.name}.upblit.dev`,
           lastUpdate: new Date().toLocaleDateString(),
           branch: 'main',
           status: project.deployed ? 'active' : 'building'

@@ -8,7 +8,7 @@ import styles from './addon.module.css';
 interface Repository {
   name: string;
   clone_url: string;
-  private: boolean;
+  private: string;
   description?: string;
   language?: string;
   updated_at?: string;

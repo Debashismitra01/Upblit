@@ -84,7 +84,7 @@ export default function ContactPage() {
                         />
                     </label>
 
-                    <button type="submit" disabled={status === "loading"}>
+                    <button type="submit" disabled={status === "loading"}  className={styles.button}>
                         {status === "loading" ? "Sending..." : "Send Message"}
                     </button>
 

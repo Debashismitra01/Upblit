@@ -7,7 +7,7 @@ export default function Header() {
       <div className={styles.nav}>
         <div className={styles.logo}>
           <img src="/mascot.png" alt="logo" className={styles.logoIcon}/>
-          <span className={styles.userName}>Debashis' projects</span>
+          <span className={styles.userName}>Debashis&apos; projects</span>
           <span className={styles.plan}>Hobby</span>
         </div>
 

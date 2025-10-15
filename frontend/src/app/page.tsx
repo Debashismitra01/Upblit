@@ -3,15 +3,13 @@ import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import BG from "./component/Background/background";
 import Navbar from "./component/navbar/navbar";
-import { ChevronRight, Github, Zap, Shield, GitBranch, Server, Database, Globe, Users, Terminal, Rocket, Code, Lock, CheckCircle, ArrowRight, Play, FileText, Clock, Layers, Network, BarChart3, GitMerge } from "lucide-react";
+import { Github, Zap, Shield, GitBranch, Server, Database, Globe,  Terminal, Rocket, Clock, Network, BarChart3, GitMerge } from "lucide-react";
 import Contributors from './component/contributors/contributors';
 
 export default function Hello() {
   const [activeFeature, setActiveFeature] = useState(0);
-  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    setIsVisible(true);
     const interval = setInterval(() => {
       setActiveFeature((prev) => (prev + 1) % 5);
     }, 3000);
@@ -171,7 +169,7 @@ export default function Hello() {
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-gray-900 p-8 rounded-2xl border border-gray-700">
               <blockquote className="text-gray-300 mb-6 leading-relaxed" style={{fontFamily: 'var(--font-montserrat, "Helvetica", sans-serif)'}}>
-                "{testimonial.quote}"
+                {testimonial.quote}
               </blockquote>
               <div>
                 <div className="font-bold text-gray-100">{testimonial.author}</div>
@@ -216,7 +214,7 @@ export default function Hello() {
               href="/signup"
               className="bg-white text-gray-900 px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-200 hover:bg-gray-200 hover:scale-105"
             >
-              Start Deploying →
+              Start Deploying → 
             </a>
             <a 
               href="/docs"
