@@ -1,6 +1,6 @@
 import styles from "./login.module.css";
 import Navbar from "../component/navbar/navbar";
-import BG from "../component/Background/background";
+import BG from "../component/background/background";
 export default function Login() {
   const baseApiUrl = process.env.NEXT_PUBLIC_API_URL;
   const githubUri = `${baseApiUrl}/oauth2/authorization/github`;

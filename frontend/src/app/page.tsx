@@ -1,7 +1,7 @@
 "use client"
 import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
-import BG from "./component/Background/background";
+import BG from "./component/background/background";
 import Navbar from "./component/navbar/navbar";
 import { Github, Zap, Shield, GitBranch, Server, Database, Globe,  Terminal, Rocket, Clock, Network, BarChart3, GitMerge } from "lucide-react";
 import Contributors from './component/contributors/contributors';
@@ -169,7 +169,7 @@ export default function Hello() {
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-gray-900 p-8 rounded-2xl border border-gray-700">
               <blockquote className="text-gray-300 mb-6 leading-relaxed" style={{fontFamily: 'var(--font-montserrat, "Helvetica", sans-serif)'}}>
-                {testimonial.quote}
+                &quot;{testimonial.quote}&quot;
               </blockquote>
               <div>
                 <div className="font-bold text-gray-100">{testimonial.author}</div>

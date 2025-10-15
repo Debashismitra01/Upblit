@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import styles from "./contact.module.css";
-import BG from "../component/Background/background";
+import BG from "../component/background/background";
 import Navbar from "../component/navbar/navbar";
 
 
