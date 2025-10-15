@@ -1,9 +1,10 @@
 "use client"
 import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
-import BG from "./component/background/background";
+import BG from "./component/Background/background";
 import Navbar from "./component/navbar/navbar";
 import { ChevronRight, Github, Zap, Shield, GitBranch, Server, Database, Globe, Users, Terminal, Rocket, Code, Lock, CheckCircle, ArrowRight, Play, FileText, Clock, Layers, Network, BarChart3, GitMerge } from "lucide-react";
+import Contributors from './component/contributors/contributors';
 
 export default function Hello() {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -92,7 +93,7 @@ export default function Hello() {
               <div className={`p-6 rounded-2xl border transition-all duration-300 h-full ${
                 activeFeature === index
                   ? 'bg-white text-gray-900 border-gray-300 shadow-2xl'
-                  : 'bg-gray-900 border-gray-700 hover:border-gray-600'
+                  : 'bg-[#cb0169] border-transparent hover:border-[#fe0184]'
               }`}>
                 <feature.icon className={`w-12 h-12 mb-4 ${
                   activeFeature === index ? 'text-gray-900' : 'text-gray-300'
@@ -103,15 +104,10 @@ export default function Hello() {
                   {feature.title}
                 </h3>
                 <p className={`text-sm leading-relaxed mb-4 ${
-                  activeFeature === index ? 'text-gray-700' : 'text-gray-400'
+                  activeFeature === index ? 'text-gray-700' : 'text-gray-900'
                 }`}>
                   {feature.desc}
                 </p>
-                <div className={`text-xs font-mono ${
-                  activeFeature === index ? 'text-gray-600' : 'text-gray-500'
-                }`}>
-                  Replaces: {feature.replaces}
-                </div>
               </div>
             </div>
           ))}
@@ -231,7 +227,7 @@ export default function Hello() {
           </div>
         </div>
       </section>
-
+   {<Contributors type="large"/>}
       {/* Footer */}
       <footer className="border-t border-gray-700 mt-20">
         <div className="max-w-7xl mx-auto px-6 py-12">
