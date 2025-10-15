@@ -1,5 +1,6 @@
 "use client"
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 import styles from "./page.module.css";
 import BG from "./component/Background/background";
 import Navbar from "./component/navbar/navbar";
@@ -69,53 +70,116 @@ export default function Hello() {
         <BG/>
         
         {/* Hero Section */}
-        <div className={styles.main}>
-          <h1>Zero-Config Infrastructure for Developers</h1>
-          <p>Deploy full-stack apps in seconds with GitHub integration, dynamic subdomains, and zero-config reverse proxying.</p>
-          <div className={styles.action}>
-            <a href="/new">Start Deploying</a>
-            <a href="/demo">Documentation</a>
-          </div>
+        <div className={`${styles.main} ${styles.blurIn}`}>
+          {/* Tagline */}
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, ease: "easeOut" }}
+            style={{
+              letterSpacing: '0.1em',
+              textTransform: 'uppercase',
+              color: '#9ca3af',
+              fontFamily: 'var(--font-space-grotesk, system-ui)',
+              fontSize: '0.9rem',
+              marginBottom: '0.75rem'
+            }}
+          >
+            Open Source. Agentic. Cloud-Native.
+          </motion.div>
+          {/* Mixed-direction headline with per-word animation */}
+          <motion.h1
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, ease: "easeOut" }}
+          >
+            <motion.span initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6 }}>ZERO-CONFIG</motion.span>{' '}
+            <motion.span
+              initial={{ opacity: 0, x: -100 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: 0.35, duration: 0.8, ease: "easeOut" }}
+              style={{ color: '#fe0184' }}
+            >
+              <span className={styles.textShine}>INFRASTRUCTURE</span>
+            </motion.span>{' '}
+            <motion.span initial={{ opacity: 0, y: -16 }} animate={{ opacity: 1, y: 0 }} transition={{ delay: 0.55, duration: 0.6 }}>FOR</motion.span>{' '}
+            <motion.span initial={{ opacity: 0, x: 60 }} animate={{ opacity: 1, x: 0 }} transition={{ delay: 0.65, duration: 0.6 }}>DEVELOPERS</motion.span>
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 14 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.08 }}
+          >
+            Deploy full-stack apps in seconds with GitHub integration, dynamic subdomains, and zero-config reverse proxying.
+          </motion.p>
+          <motion.div
+            className={styles.action}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut", delay: 0.16 }}
+          >
+            <motion.a
+              href="/new"
+              aria-label="Start deploying a new project"
+              whileHover={{ scale: 1.05, boxShadow: '0 0 24px rgba(254, 1, 132, 0.35)' }}
+              whileTap={{ scale: 0.96 }}
+              transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+            >
+              Start Deploying →
+            </motion.a>
+            <motion.a
+              href="/demo"
+              aria-label="View documentation and guides"
+              whileHover={{ scale: 1.03 }}
+              whileTap={{ scale: 0.97 }}
+              transition={{ type: 'spring', stiffness: 280, damping: 22 }}
+            >
+              Documentation
+            </motion.a>
+          </motion.div>
         </div>
       </div>
 
       {/* Features Section - Railway Style */}
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <motion.div className="max-w-7xl mx-auto px-6 py-20" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.6, ease: 'easeOut' }}>
         <div className="grid grid-cols-1 lg:grid-cols-5 gap-8">
           {features.map((feature, index) => (
-            <div
+            <motion.div
               key={index}
               className={`group cursor-pointer transition-all duration-500 ${
                 activeFeature === index ? 'scale-105' : ''
               }`}
-              
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.05 }}
             >
               <div className={`p-6 rounded-2xl border transition-all duration-300 h-full ${
                 activeFeature === index
                   ? 'bg-white text-gray-900 border-gray-300 shadow-2xl'
-                  : 'bg-[#cb0169] border-transparent hover:border-[#fe0184]'
+                  : 'bg-gray-900/70 border-gray-700 hover:border-gray-600'
               }`}>
                 <feature.icon className={`w-12 h-12 mb-4 ${
-                  activeFeature === index ? 'text-gray-900' : 'text-gray-300'
-                }`} />
+                  activeFeature === index ? 'text-gray-900' : 'text-gray-200'
+                }`} aria-hidden="true" />
                 <h3 className={`text-xl font-bold mb-3 ${
                   activeFeature === index ? 'text-gray-900' : 'text-gray-100'
                 }`}>
                   {feature.title}
                 </h3>
                 <p className={`text-sm leading-relaxed mb-4 ${
-                  activeFeature === index ? 'text-gray-700' : 'text-gray-900'
+                  activeFeature === index ? 'text-gray-700' : 'text-gray-300'
                 }`}>
                   {feature.desc}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
 
       {/* DevOps Suite Section */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <motion.section className="max-w-7xl mx-auto px-6 py-20" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.6, ease: 'easeOut' }}>
         <h2 className="text-4xl font-bold text-center mb-16 text-gray-100" style={{fontFamily: 'var(--font-cubano, "Arial Black", sans-serif)', fontWeight: 400}}>
           Complete DevOps Suite
         </h2>
@@ -136,10 +200,10 @@ export default function Hello() {
             </div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* CLI Demo */}
-      <div className="max-w-7xl mx-auto px-6 py-20">
+      <motion.div className="max-w-7xl mx-auto px-6 py-20" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.6, ease: 'easeOut' }}>
         <div className="bg-gray-900 rounded-2xl p-8 border border-gray-700">
           <div className="flex items-center mb-6">
             <Terminal className="w-6 h-6 mr-3 text-green-400" />
@@ -156,10 +220,10 @@ export default function Hello() {
             ))}
           </div>
         </div>
-      </div>
+      </motion.div>
 
       {/* Testimonials Section - Railway Style */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <motion.section className="max-w-7xl mx-auto px-6 py-20" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.6, ease: 'easeOut' }}>
         <h2 className="text-3xl font-bold text-center mb-4 text-gray-100" style={{fontFamily: 'var(--font-cubano, "Arial Black", sans-serif)', fontWeight: 400}}>
           DeployX supports great software teams wherever they are
         </h2>
@@ -180,10 +244,10 @@ export default function Hello() {
             </div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* Twitter-style Social Proof */}
-      <section className="max-w-7xl mx-auto px-6 py-20">
+      <motion.section className="max-w-7xl mx-auto px-6 py-20" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.6, ease: 'easeOut' }}>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {twitterTweets.map((tweet, index) => (
             <div key={index} className="bg-gray-900 p-6 rounded-xl border border-gray-700 hover:border-gray-600 transition-colors">
@@ -199,10 +263,10 @@ export default function Hello() {
             </div>
           ))}
         </div>
-      </section>
+      </motion.section>
 
       {/* CTA Section */}
-      <section className="max-w-4xl mx-auto px-6 py-20 text-center">
+      <motion.section className="max-w-4xl mx-auto px-6 py-20 text-center" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.6, ease: 'easeOut' }}>
         <div className="bg-gray-900 rounded-2xl p-12 border border-gray-700">
           <Clock className="w-16 h-16 text-gray-300 mx-auto mb-6" />
           <h2 className="text-4xl font-bold mb-6 text-gray-100" style={{fontFamily: 'var(--font-cubano, "Arial Black", sans-serif)', fontWeight: 400}}>
@@ -226,7 +290,7 @@ export default function Hello() {
             </a>
           </div>
         </div>
-      </section>
+      </motion.section>
    {<Contributors type="large"/>}
       {/* Footer */}
       <footer className="border-t border-gray-700 mt-20">
