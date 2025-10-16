@@ -3,13 +3,13 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 91.9vh;
+  height: auto;
   width: 100dvw;
   max-width: 100%;
   color: #f5f5f5;
   box-sizing: border-box;
   font-family: var(--font-space-grotesk);
-  padding: clamp(1rem, 2.5vw, 1.75rem);
+  padding: clamp(1em, 2.5vw, 1.75em);
   isolation: isolate;
   overflow: hidden;
 }
@@ -47,35 +47,103 @@
 .container {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: start;
   justify-content: center;
-  background: linear-gradient(
-    300deg,
-    rgba(254, 1, 132, 0.14),
-    rgba(20, 20, 20, 0.9)
-  );
+  background: rgba(10, 10, 10, 0.7);
   border-radius: 24px;
   width: min(900px, 100%);
   max-height: 100%;
-  padding: clamp(1.4rem, 3.5vw, 2.15rem);
+  padding: clamp(1.25em, 3vw, 2.15em);
   box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32),
     0 0 0 1px rgba(255, 255, 255, 0.04);
   overflow: hidden;
 }
 
-.heading {
+.copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 2em 0;
+}
+
+.title {
   font-family: var(--font-cubano);
-  font-size: clamp(1.5rem, 1.85vw, 1.9rem);
-  margin-bottom: 0.2em;
-  text-align: center;
+  font-size: clamp(2.8rem, 3vw, 3rem);
+  margin: 0;
+  line-height: 1;
+  letter-spacing: 0.015em;
 }
 
 .subheading {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 0.3em 0;
+  border-top: 3px solid rgba(255, 255, 255, 0.03);
+  border-bottom: 3px solid rgba(255, 255, 255, 0.03);
+}
+
+.subheadingText {
   color: #f5f5f5;
-  font-size: clamp(1.1rem, 1vw, 1rem);
-  text-align: center;
-  width: clamp(300px, 2.4vw, 500px);
-  margin-bottom: 1.25em;
+  font-size: clamp(1.4rem, 1.55vw, 1.55rem);
+  margin-bottom: clamp(-0.3em, 2.5vh, -0.75em);
+}
+
+.subheadingHighlight {
+  font-family: var(--font-cubano);
+  font-size: clamp(1.85rem, 2.1vw, 2.1rem);
+  letter-spacing: 0.015em;
+  text-shadow: 1px 2px 12px #fe0184;
+}
+
+.subtitle {
+  margin: 0;
+  color: rgba(255, 255, 255, 0.78);
+  font-size: clamp(0.95rem, 1.02vw, 1.05rem);
+  line-height: 1.5;
+  max-width: 28ch;
+  text-align: justify;
+}
+
+.emailButton {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.8em 0.6em;
+  width: 80%;
+  border-radius: 13px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: 0.01em;
+  text-decoration: none;
+  color: #f5f5f5;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.26);
+}
+
+.emailButton:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 26px rgba(0, 0, 0, 0.3);
+  border-color: linear-gradient(
+    135deg,
+    rgba(254, 1, 132, 0.1),
+    rgba(254, 1, 132, 0.9)
+  );
+  background: rgba(254, 1, 132, 0.14);
+}
+
+.emailButton:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(254, 1, 132, 0.22);
+}
+
+.eamilIcon {
+  width: 24px;
+  height: 24px;
+  fill: currentColor;
 }
 
 .form {
@@ -85,10 +153,19 @@
   justify-content: start;
   gap: 1rem;
   width: min(750px, 100%);
-  background-color: #21212195;
+  background: linear-gradient(
+    175deg,
+    rgba(254, 1, 132, 0.14),
+    rgba(20, 20, 20, 0.82)
+  );
+  border: 1px solid rgba(254, 1, 132, 0.18);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.32),
+    0 0 0 1px rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(16px);
+  z-index: 1;
   border-radius: 24px;
   height: 100%;
-  padding: clamp(1rem, 3vw, 2rem);
+  padding: 1.2em;
 }
 
 .container label {
@@ -106,7 +183,7 @@
   background-color: rgba(33, 33, 33, 0.6); /* match container transparency */
   border: 1px solid rgba(255, 255, 255, 0.25);
   border-radius: 10px;
-  padding: 0.5rem;
+  padding: 0.8em;
   color: #f5f5f5;
   font-family: var(--font-jetbrains);
   font-size: 0.9rem;
@@ -138,7 +215,6 @@
 .container button {
   width: 100%;
   padding: 0.9rem;
-  /* border: 1px solid #f5f5f5; */
   border-radius: 12px;
   background-color: #cb0169;
   color: #f5f5f5;
@@ -147,6 +223,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: all 0.25s ease;
+  margin-top: 1em;
 }
 
 .button:hover {
@@ -186,8 +263,20 @@
 }
 
 @media (min-width: 600px) {
+  .pageWrapper {
+    height: 91.9vh;
+  }
   .container {
     flex-direction: row;
-    gap: 1em;
+
+    gap: 1.8em;
+  }
+
+  .copy {
+    padding: 2.15em;
+  }
+
+  .form {
+    padding: 2em;
   }
 }
