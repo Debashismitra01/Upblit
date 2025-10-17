@@ -4,8 +4,11 @@ import { motion } from "framer-motion";
 import styles from "./page.module.css";
 import BG from "./component/background/background";
 import Navbar from "./component/navbar/navbar";
-import { Github, Zap, Shield, GitBranch, Server, Database, Globe,  Terminal, Rocket, Clock, Network, BarChart3, GitMerge } from "lucide-react";
+import {  Zap, Shield, GitBranch, Server, Database, Globe,  Terminal, Clock, Network, BarChart3, GitMerge, Facebook, Github, Instagram, Twitter } from "lucide-react";
 import Contributors from './component/contributors/contributors';
+// import Footer from "./component/Footer";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hello() {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -290,7 +293,93 @@ export default function Hello() {
         </div>
       </motion.section>
    {<Contributors type="large"/>}
-      {/* Footer removed; using global footer from layout */}
+      {/* Footer */}
+    <footer className="bg-gradient-to-r from-purple-700 via-pink-600 to-red-500 text-white py-10 mt-12">
+      <div className="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        {/* Logo + Brand */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center md:text-left"
+        >
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={160}
+            height={80}
+            priority
+            className="w-32 h-16 sm:w-36 sm:h-18 md:w-40 md:h-20 object-contain mx-auto md:mx-0"
+          />
+          <p className="text-sm text-white/80 mt-2">
+            Deploy apps in seconds, no config needed.
+          </p>
+        </motion.div>
+
+        {/* Company Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-center md:text-left"
+        >
+          <h3 className="font-semibold text-lg mb-3">Company</h3>
+          <ul className="space-y-2 text-sm text-white/90">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </motion.div>
+
+        {/* Support Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-center md:text-left"
+        >
+          <h3 className="font-semibold text-lg mb-3">Support</h3>
+          <ul className="space-y-2 text-sm text-white/90">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </motion.div>
+
+        {/* Follow Us Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center md:text-left"
+        >
+          <h3 className="font-semibold text-lg mb-3">Follow Us</h3>
+          <div className="flex justify-center md:justify-start space-x-4">
+            {[Facebook, Twitter, Instagram, Github].map((Icon, i) => (
+              <motion.a
+                key={i}
+                href="#"
+                whileHover={{ scale: 1.2, rotate: 10 }}
+                className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition"
+              >
+                <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
+              </motion.a>
+            ))}
+          </div>
+        </motion.div>
+      </div>
+
+      {/* Bottom Bar */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8 }}
+        className="text-center text-sm mt-8 border-t border-white/20 pt-5"
+      >
+        <p>© {new Date().getFullYear()} Upblit. All rights reserved.</p>
+      </motion.div>
+    </footer>
+
     </>
   )
 }
