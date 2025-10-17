@@ -3,8 +3,11 @@ import React, { useState, useEffect } from "react";
 import styles from "./page.module.css";
 import BG from "./component/background/background";
 import Navbar from "./component/navbar/navbar";
-import { Github, Zap, Shield, GitBranch, Server, Database, Globe,  Terminal, Rocket, Clock, Network, BarChart3, GitMerge } from "lucide-react";
+import {  Zap, Shield, GitBranch, Server, Database, Globe,  Terminal, Clock, Network, BarChart3, GitMerge, Facebook, Github, Instagram, Twitter } from "lucide-react";
 import Contributors from './component/contributors/contributors';
+// import Footer from "./component/Footer";
+import { motion } from "framer-motion";
+import Image from "next/image";
 
 export default function Hello() {
   const [activeFeature, setActiveFeature] = useState(0);
@@ -227,24 +230,92 @@ export default function Hello() {
       </section>
    {<Contributors type="large"/>}
       {/* Footer */}
-      <footer className="border-t border-gray-700 mt-20">
-        <div className="max-w-7xl mx-auto px-6 py-12">
-          <div className="flex flex-col md:flex-row justify-between items-center">
-            <div className="flex items-center space-x-2 mb-4 md:mb-0">
-              <div className="w-8 h-8 bg-gray-300 rounded-lg flex items-center justify-center">
-                <Rocket className="w-5 h-5 text-gray-800" />
-              </div>
-              <span className="text-xl font-bold text-gray-100">DeployX</span>
-            </div>
-            <div className="flex items-center space-x-6 text-gray-400">
-              <a href="#" className="hover:text-gray-300 transition-colors">Privacy</a>
-              <a href="#" className="hover:text-gray-300 transition-colors">Terms</a>
-              <a href="#" className="hover:text-gray-300 transition-colors">Support</a>
-              <Github className="w-5 h-5 hover:text-gray-300 transition-colors cursor-pointer" />
-            </div>
+    <footer className="bg-gradient-to-r from-purple-700 via-pink-600 to-red-500 text-white py-10 mt-12">
+      <div className="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+        {/* Logo + Brand */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          className="text-center md:text-left"
+        >
+          <Image
+            src="/logo.png"
+            alt="Logo"
+            width={160}
+            height={80}
+            priority
+            className="w-32 h-16 sm:w-36 sm:h-18 md:w-40 md:h-20 object-contain mx-auto md:mx-0"
+          />
+          <p className="text-sm text-white/80 mt-2">
+            Deploy apps in seconds, no config needed.
+          </p>
+        </motion.div>
+
+        {/* Company Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.2 }}
+          className="text-center md:text-left"
+        >
+          <h3 className="font-semibold text-lg mb-3">Company</h3>
+          <ul className="space-y-2 text-sm text-white/90">
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </motion.div>
+
+        {/* Support Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.4 }}
+          className="text-center md:text-left"
+        >
+          <h3 className="font-semibold text-lg mb-3">Support</h3>
+          <ul className="space-y-2 text-sm text-white/90">
+            <li><a href="#">Help Center</a></li>
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+          </ul>
+        </motion.div>
+
+        {/* Follow Us Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.6 }}
+          className="text-center md:text-left"
+        >
+          <h3 className="font-semibold text-lg mb-3">Follow Us</h3>
+          <div className="flex justify-center md:justify-start space-x-4">
+            {[Facebook, Twitter, Instagram, Github].map((Icon, i) => (
+              <motion.a
+                key={i}
+                href="#"
+                whileHover={{ scale: 1.2, rotate: 10 }}
+                className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition"
+              >
+                <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
+              </motion.a>
+            ))}
           </div>
-        </div>
-      </footer>
+        </motion.div>
+      </div>
+
+      {/* Bottom Bar */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ delay: 0.8 }}
+        className="text-center text-sm mt-8 border-t border-white/20 pt-5"
+      >
+        <p>© {new Date().getFullYear()} Upblit. All rights reserved.</p>
+      </motion.div>
+    </footer>
+
     </>
   )
 }
