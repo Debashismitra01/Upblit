@@ -1,4 +1,4 @@
-# [Upblit](https://upblit.dev) : `Deploy Like Enterprise`
+# [Upblit](https://upblit.dev) : `Think.Build.Deploy.Scale🧠`
 
 
 <p align="center">
@@ -120,6 +120,7 @@ Earn the `Upblit Contributor` badge by:
 1. Submitting a meaningful PR that gets merged 🧩
 2. Following contribution and code standards 🧠
 3. Helping make deployments smarter 🚀
+4. 🧰 No spammy PRs — quality > quantity 😎
 
 ---
 
