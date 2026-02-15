@@ -3,13 +3,13 @@
 *.iml
 *.ipr
 .vscode
-
+.env
+node_modules
 
 
 # ==========================================
 # 🌐 FRONTEND (Next.js / Node)
 # ==========================================
-/frontend/node_modules
 /frontend/.pnp
 /frontend/.pnp.*
 /frontend/.yarn/*
