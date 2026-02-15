@@ -1,1 +1,31 @@
-{"type":"module","scripts":{"dev":"nodemon Index.js"},"dependencies":{"dotenv":"^17.3.1","express":"^5.2.1","nodemon":"^3.1.11","resend":"^6.9.2"}}
+{
+  "name": "upblit-email-service",
+  "version": "1.0.0",
+  "description": "Transactional email microservice for Upblit platform built with Express and Resend.",
+  "author": "Debashis Mitra",
+  "license": "MIT",
+  "private": true,
+  "main": "Index.js",
+  "type": "commonjs",
+
+  "scripts": {
+    "start": "node Index.js",
+    "dev": "nodemon Index.js",
+    "prod": "node Index.js",
+    "lint": "echo \"No linter configured yet\""
+  },
+
+  "engines": {
+    "node": ">=18.0.0"
+  },
+
+  "dependencies": {
+    "dotenv": "^17.3.1",
+    "express": "^5.2.1",
+    "resend": "^6.9.2"
+  },
+
+  "devDependencies": {
+    "nodemon": "^3.1.11"
+  }
+}
