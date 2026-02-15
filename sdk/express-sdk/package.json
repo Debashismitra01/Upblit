@@ -1,0 +1,23 @@
+{
+  "name": "upblit-express",
+  "version": "1.0.0",
+  "description": "The Upblit SDK for express framework",
+  "homepage": "https://github.com/Debashismitra01/Upblit#readme",
+  "bugs": {
+    "url": "https://github.com/Debashismitra01/Upblit/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Debashismitra01/Upblit.git"
+  },
+  "license": "MIT",
+  "author": "Debashis Mitra",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^1.13.5"
+  }
+}
