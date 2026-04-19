@@ -2,7 +2,7 @@ const axios = require("axios");
 
 let telemetry = [];
 
-const API_URL = "http://app.upblit.dev/api/v1/logscollector";
+const API_URL = "https://app.upblit.dev/api/v1/logscollector";
 
 
 setInterval(async () => {
@@ -14,7 +14,7 @@ setInterval(async () => {
             { telemetry },
             {
                 headers: {
-                    Authorization: `Bearer ${jwtToken}`
+                    "X-API-KEY":jwtToken
                 }
             }
         );

@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@scalar/api-reference": "^1.44.25"
+  }
+}

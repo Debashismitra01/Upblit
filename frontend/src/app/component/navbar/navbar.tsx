@@ -39,12 +39,12 @@ export default function Navbar() {
         <div className={styles.navbar}>
                 <div className={styles.left}>
                     <Link href="/" className={styles.logoLink}>
-                        <img src="/logo.png" alt="logo" className={styles.logo}/>
+                        <img src="/banner.png" alt="logo" className={styles.logo}/>
                     </Link>
                     
                     <div className={styles.menu}>
                         <Link href="/product" className={styles.menuLink}>Product</Link>
-                        <Link href="/developer" className={styles.menuLink}>Developer</Link>
+                        <Link href="/docs" className={styles.menuLink}>Docs</Link>
                         <Link href="/faq" className={styles.menuLink}>FAQ</Link>
                         <Link href="/company" className={styles.menuLink}>Company</Link>
                         <Link href="/pricing" className={styles.menuLink}>Pricing</Link>

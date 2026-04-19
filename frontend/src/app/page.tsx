@@ -4,10 +4,9 @@ import { motion } from "framer-motion";
 import styles from "./page.module.css";
 import BG from "./component/background/background";
 import Navbar from "./component/navbar/navbar";
-import {  Zap, Shield, GitBranch, Server, Database, Globe,  Terminal, Clock, Network, BarChart3, GitMerge, Facebook, Github, Instagram, Twitter } from "lucide-react";
+import { Zap, Shield, GitBranch, Server, Database, Globe, Terminal, Clock, Network, BarChart3, GitMerge, Facebook, Github, Instagram, Twitter } from "lucide-react";
 import Contributors from './component/contributors/contributors';
 // import Footer from "./component/Footer";
-import { motion } from "framer-motion";
 import Image from "next/image";
 
 export default function Hello() {
@@ -33,7 +32,7 @@ export default function Hello() {
     "$ deployx push",
     "$ deployx live ",
     "$ deployx deploy --env prod",
-    "$ deployx logs --project api-server", 
+    "$ deployx logs --project api-server",
     "$ deployx rollback --to v2.3.1"
   ];
 
@@ -45,7 +44,7 @@ export default function Hello() {
     },
     {
       quote: "DeployX is a game changer for us. We're serving 50,000+ developers with a small team. Every minute spent on infrastructure is a minute we're not building features.",
-      author: "Alex Rodriguez", 
+      author: "Alex Rodriguez",
       role: "Founder at DevTools Inc"
     },
     {
@@ -66,10 +65,10 @@ export default function Hello() {
 
   return (
     <>
-      <Navbar/>
+      <Navbar />
       <div className={styles.page}>
-        <BG/>
         
+
         {/* Hero Section */}
         <div className={`${styles.main} ${styles.blurIn}`}>
           {/* Tagline */}
@@ -147,30 +146,25 @@ export default function Hello() {
           {features.map((feature, index) => (
             <motion.div
               key={index}
-              className={`group cursor-pointer transition-all duration-500 ${
-                activeFeature === index ? 'scale-105' : ''
-              }`}
+              className={`group cursor-pointer transition-all duration-500 ${activeFeature === index ? 'scale-105' : ''
+                }`}
               initial={{ opacity: 0, y: 24 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.05 }}
             >
-              <div className={`p-6 rounded-2xl border transition-all duration-300 h-full ${
-                activeFeature === index
+              <div className={`p-6 rounded-2xl border transition-all duration-300 h-full ${activeFeature === index
                   ? 'bg-white text-gray-900 border-gray-300 shadow-2xl'
                   : 'bg-gray-900/70 border-gray-700 hover:border-gray-600'
-              }`}>
-                <feature.icon className={`w-12 h-12 mb-4 ${
-                  activeFeature === index ? 'text-gray-900' : 'text-gray-200'
-                }`} aria-hidden="true" />
-                <h3 className={`text-xl font-bold mb-3 ${
-                  activeFeature === index ? 'text-gray-900' : 'text-gray-100'
                 }`}>
+                <feature.icon className={`w-12 h-12 mb-4 ${activeFeature === index ? 'text-gray-900' : 'text-gray-200'
+                  }`} aria-hidden="true" />
+                <h3 className={`text-xl font-bold mb-3 ${activeFeature === index ? 'text-gray-900' : 'text-gray-100'
+                  }`}>
                   {feature.title}
                 </h3>
-                <p className={`text-sm leading-relaxed mb-4 ${
-                  activeFeature === index ? 'text-gray-700' : 'text-gray-300'
-                }`}>
+                <p className={`text-sm leading-relaxed mb-4 ${activeFeature === index ? 'text-gray-700' : 'text-gray-300'
+                  }`}>
                   {feature.desc}
                 </p>
               </div>
@@ -181,10 +175,10 @@ export default function Hello() {
 
       {/* DevOps Suite Section */}
       <motion.section className="max-w-7xl mx-auto px-6 py-20" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.6, ease: 'easeOut' }}>
-        <h2 className="text-4xl font-bold text-center mb-16 text-gray-100" style={{fontFamily: 'var(--font-cubano, "Arial Black", sans-serif)', fontWeight: 400}}>
+        <h2 className="text-4xl font-bold text-center mb-16 text-gray-100" style={{ fontFamily: 'var(--font-cubano, "Arial Black", sans-serif)', fontWeight: 400 }}>
           Complete DevOps Suite
         </h2>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {[
             { icon: Server, title: "Deploy Server", desc: "Deploy via Git, CLI, or API to VMs, Docker, or Kubernetes clusters" },
@@ -197,7 +191,7 @@ export default function Hello() {
             <div key={index} className="group p-6 bg-gray-900 rounded-xl border border-gray-700 hover:border-gray-600 hover:bg-gray-800 transition-all duration-300">
               <component.icon className="w-12 h-12 text-gray-300 mb-4 group-hover:text-white transition-colors" />
               <h3 className="text-xl font-bold mb-3 text-gray-100 group-hover:text-white">{component.title}</h3>
-              <p className="text-gray-400 group-hover:text-gray-300 leading-relaxed transition-colors" style={{fontFamily: 'var(--font-montserrat, "Helvetica", sans-serif)'}}>{component.desc}</p>
+              <p className="text-gray-400 group-hover:text-gray-300 leading-relaxed transition-colors" style={{ fontFamily: 'var(--font-montserrat, "Helvetica", sans-serif)' }}>{component.desc}</p>
             </div>
           ))}
         </div>
@@ -208,11 +202,11 @@ export default function Hello() {
         <div className="bg-gray-900 rounded-2xl p-8 border border-gray-700">
           <div className="flex items-center mb-6">
             <Terminal className="w-6 h-6 mr-3 text-green-400" />
-            <h3 className="text-2xl font-bold text-gray-100" style={{fontFamily: 'var(--font-cubano, "Arial Black", sans-serif)', fontWeight: 400}}>
+            <h3 className="text-2xl font-bold text-gray-100" style={{ fontFamily: 'var(--font-cubano, "Arial Black", sans-serif)', fontWeight: 400 }}>
               Deploy with Simple Commands
             </h3>
           </div>
-          <div className="bg-black rounded-lg p-6 text-sm" style={{fontFamily: 'var(--font-jetbrains, "Monaco", monospace)'}}>
+          <div className="bg-black rounded-lg p-6 text-sm" style={{ fontFamily: 'var(--font-jetbrains, "Monaco", monospace)' }}>
             {cliCommands.map((cmd, index) => (
               <div key={index} className="flex items-center mb-2">
                 <span className="text-green-400 mr-2">❯</span>
@@ -225,17 +219,17 @@ export default function Hello() {
 
       {/* Testimonials Section - Railway Style */}
       <motion.section className="max-w-7xl mx-auto px-6 py-20" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.6, ease: 'easeOut' }}>
-        <h2 className="text-3xl font-bold text-center mb-4 text-gray-100" style={{fontFamily: 'var(--font-cubano, "Arial Black", sans-serif)', fontWeight: 400}}>
+        <h2 className="text-3xl font-bold text-center mb-4 text-gray-100" style={{ fontFamily: 'var(--font-cubano, "Arial Black", sans-serif)', fontWeight: 400 }}>
           DeployX supports great software teams wherever they are
         </h2>
-        <p className="text-center text-gray-400 mb-16" style={{fontFamily: 'var(--font-montserrat, "Helvetica", sans-serif)'}}>
+        <p className="text-center text-gray-400 mb-16" style={{ fontFamily: 'var(--font-montserrat, "Helvetica", sans-serif)' }}>
           Hear from some of the teams building their products on DeployX
         </p>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {testimonials.map((testimonial, index) => (
             <div key={index} className="bg-gray-900 p-8 rounded-2xl border border-gray-700">
-              <blockquote className="text-gray-300 mb-6 leading-relaxed" style={{fontFamily: 'var(--font-montserrat, "Helvetica", sans-serif)'}}>
+              <blockquote className="text-gray-300 mb-6 leading-relaxed" style={{ fontFamily: 'var(--font-montserrat, "Helvetica", sans-serif)' }}>
                 &quot;{testimonial.quote}&quot;
               </blockquote>
               <div>
@@ -270,20 +264,20 @@ export default function Hello() {
       <motion.section className="max-w-4xl mx-auto px-6 py-20 text-center" initial={{ opacity: 0, y: 40 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, margin: '-80px' }} transition={{ duration: 0.6, ease: 'easeOut' }}>
         <div className="bg-gray-900 rounded-2xl p-12 border border-gray-700">
           <Clock className="w-16 h-16 text-gray-300 mx-auto mb-6" />
-          <h2 className="text-4xl font-bold mb-6 text-gray-100" style={{fontFamily: 'var(--font-cubano, "Arial Black", sans-serif)', fontWeight: 400}}>
+          <h2 className="text-4xl font-bold mb-6 text-gray-100" style={{ fontFamily: 'var(--font-cubano, "Arial Black", sans-serif)', fontWeight: 400 }}>
             A better future is now boarding
           </h2>
-          <p className="text-xl text-gray-300 mb-8" style={{fontFamily: 'var(--font-montserrat, "Helvetica", sans-serif)'}}>
+          <p className="text-xl text-gray-300 mb-8" style={{ fontFamily: 'var(--font-montserrat, "Helvetica", sans-serif)' }}>
             Deploy your first project today
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center" style={{fontFamily: 'var(--font-jetbrains, "Monaco", monospace)'}}>
-            <a 
+          <div className="flex flex-col sm:flex-row gap-4 justify-center" style={{ fontFamily: 'var(--font-jetbrains, "Monaco", monospace)' }}>
+            <a
               href="/signup"
               className="bg-white text-gray-900 px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-200 hover:bg-gray-200 hover:scale-105"
             >
-              Start Deploying → 
+              Start Deploying →
             </a>
-            <a 
+            <a
               href="/docs"
               className="bg-gray-800 text-gray-100 border border-gray-600 px-8 py-4 rounded-2xl text-lg font-bold transition-all duration-200 hover:bg-gray-700 hover:border-gray-500"
             >
@@ -292,93 +286,8 @@ export default function Hello() {
           </div>
         </div>
       </motion.section>
-   {<Contributors type="large"/>}
+      {<Contributors type="large" />}
       {/* Footer */}
-    <footer className="bg-gradient-to-r from-purple-700 via-pink-600 to-red-500 text-white py-10 mt-12">
-      <div className="container mx-auto px-6 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-        {/* Logo + Brand */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8 }}
-          className="text-center md:text-left"
-        >
-          <Image
-            src="/logo.png"
-            alt="Logo"
-            width={160}
-            height={80}
-            priority
-            className="w-32 h-16 sm:w-36 sm:h-18 md:w-40 md:h-20 object-contain mx-auto md:mx-0"
-          />
-          <p className="text-sm text-white/80 mt-2">
-            Deploy apps in seconds, no config needed.
-          </p>
-        </motion.div>
-
-        {/* Company Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-center md:text-left"
-        >
-          <h3 className="font-semibold text-lg mb-3">Company</h3>
-          <ul className="space-y-2 text-sm text-white/90">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Careers</a></li>
-            <li><a href="#">Contact</a></li>
-          </ul>
-        </motion.div>
-
-        {/* Support Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
-          className="text-center md:text-left"
-        >
-          <h3 className="font-semibold text-lg mb-3">Support</h3>
-          <ul className="space-y-2 text-sm text-white/90">
-            <li><a href="#">Help Center</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-            <li><a href="#">Terms of Service</a></li>
-          </ul>
-        </motion.div>
-
-        {/* Follow Us Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
-          className="text-center md:text-left"
-        >
-          <h3 className="font-semibold text-lg mb-3">Follow Us</h3>
-          <div className="flex justify-center md:justify-start space-x-4">
-            {[Facebook, Twitter, Instagram, Github].map((Icon, i) => (
-              <motion.a
-                key={i}
-                href="#"
-                whileHover={{ scale: 1.2, rotate: 10 }}
-                className="p-2 rounded-full bg-white/20 hover:bg-white/30 transition"
-              >
-                <Icon className="w-5 h-5 sm:w-6 sm:h-6" />
-              </motion.a>
-            ))}
-          </div>
-        </motion.div>
-      </div>
-
-      {/* Bottom Bar */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ delay: 0.8 }}
-        className="text-center text-sm mt-8 border-t border-white/20 pt-5"
-      >
-        <p>© {new Date().getFullYear()} Upblit. All rights reserved.</p>
-      </motion.div>
-    </footer>
 
     </>
   )

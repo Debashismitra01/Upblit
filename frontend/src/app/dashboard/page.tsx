@@ -23,7 +23,7 @@ export default function Dashboard() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loading, setLoading] = useState(true);
   const [searchTerm, setSearchTerm] = useState('');
-  const dashboarduri=`${process.env.NEXT_PUBLIC_API_URL}/dashboard`
+  const dashboarduri = `${process.env.NEXT_PUBLIC_API_URL}/project`
   useEffect(() => {
     const fetchProjects = async () => {
       try {
@@ -35,16 +35,13 @@ export default function Dashboard() {
         });
         if (!res.ok) throw new Error('Failed to fetch projects');
         const data = await res.json();
-        
+
         // Transform data to match our interface
         const transformedProjects = data.map((project: Project) => ({
           ...project,
-          domain: `${project.name}.upblit.dev`,
           lastUpdate: new Date().toLocaleDateString(),
-          branch: 'main',
-          status: project.deployed ? 'active' : 'building'
         }));
-        
+
         setProjects(transformedProjects);
       } catch (err) {
         console.error(err);
@@ -64,7 +61,7 @@ export default function Dashboard() {
   return (
     <div className={styles.container}>
       <Header />
-      
+
       <main className={styles.main}>
         <div className={styles.sidebar}>
           <UsageStats />
@@ -87,7 +84,7 @@ export default function Dashboard() {
                 <button className={styles.viewBtn}>≡</button>
               </div>
             </div>
-            
+
             <Link href="/new">
               <button className={styles.addButton}>Add New...</button>
             </Link>
@@ -95,7 +92,7 @@ export default function Dashboard() {
 
           <div className={styles.projectsSection}>
             <h2 className={styles.sectionTitle}>Projects</h2>
-            
+
             {loading ? (
               <div className={styles.loading}>
                 <div className={styles.spinner}></div>
@@ -106,7 +103,7 @@ export default function Dashboard() {
                 <div className={styles.emptyIcon}>📁</div>
                 <p>No projects found.</p>
                 {searchTerm && (
-                  <button 
+                  <button
                     onClick={() => setSearchTerm('')}
                     className={styles.clearSearch}
                   >
