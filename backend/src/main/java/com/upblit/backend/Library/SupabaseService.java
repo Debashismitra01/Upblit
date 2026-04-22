@@ -1,5 +1,6 @@
-package com.upblit.backend.core.org;
+package com.upblit.backend.Library;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
@@ -11,11 +12,11 @@ import java.util.UUID;
 @Service
 public class SupabaseService {
 
-    private final String SUPABASE_URL = "https://fiyytxeuitkchnafptkr.storage.supabase.co";
-    private final String API_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZpeXl0eGV1aXRrY2huYWZwdGtyIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTc2MDU1OTA0NSwiZXhwIjoyMDc2MTM1MDQ1fQ.EKZo2RWqcTgri07252MchRTrJPr_P4blHV1cFKjTU9A";
-    private final String BUCKET = "Avatars";
+    private final String SUPABASE_URL = "https://emdcswqcxgzsfqicsddb.supabase.co";
+    @Value("${supabase.api.key}")
+    private String API_KEY;
 
-    public String uploadFile(MultipartFile file) throws Exception {
+    public String uploadFile(MultipartFile file,String BUCKET) throws Exception {
 
         // ✅ generate random filename
         String fileName = UUID.randomUUID() + "_" + file.getOriginalFilename();

@@ -1,5 +1,6 @@
 package com.upblit.backend.core.org;
 
+import com.upblit.backend.Library.SupabaseService;
 import com.upblit.backend.core.Organization;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -21,7 +22,7 @@ public class orgcontroller {
     public Organization create(        @ModelAttribute OrganizationDTO orgDTO,
                                  @RequestParam("file") MultipartFile file) throws Exception {
 
-        String LogoUrl = supabaseService.uploadFile(file);
+        String LogoUrl = supabaseService.uploadFile(file,"Avatars");
         return organizationService.create(orgDTO,LogoUrl);
     }
     @GetMapping

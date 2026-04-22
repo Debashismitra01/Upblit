@@ -1,6 +1,7 @@
 package com.upblit.backend.core;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import com.upblit.backend.ai.Tenant;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -37,6 +38,10 @@ public class Organization {
     @OneToMany(mappedBy = "organization")
     @JsonIgnore
     private List<Project> projects;
+
+    @OneToMany(mappedBy = "organization")
+    @JsonIgnore
+    private List<Tenant> tenants;
 
 
 }

@@ -10,7 +10,7 @@ public interface OrganizationRepository extends JpaRepository<Organization, Long
 
     Optional<Organization> findByIdAndUsersId(Long  id, Long userId);
 
-    Optional<Organization> findByUsersId(Long id);
+    Optional<Organization> findByUsersId(Long userId);
 
 
 }
